@@ -1,0 +1,44 @@
+{
+  "private": true,
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint"
+    ],
+    "*.{scss}": [
+      "stylelint"
+    ]
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/rimraf",
+      "**/rimraf/**",
+      "**/react-native-elements",
+      "**/react-native-elements/**",
+      "**/react-native",
+      "**/react-native/**",
+      "**/expo",
+      "**/expo/**",
+      "**/react-native-typescript-transformer",
+      "**/react-native-typescript-transformer/**",
+      "**/metro-bundler-config-yarn-workspaces",
+      "**/metro-bundler-config-yarn-workspaces/**",
+      "**/expo-status-bar",
+      "@react-native-community/async-storage",
+      "react-native",
+      "react-native/**",
+      "react-native-dev-menu",
+      "react-native-svg",
+      "expo-status-bar",
+      "@types/react",
+      "@types/react-dom",
+      "@types/react-native",
+      "jetifier"
+    ]
+  }
+}
